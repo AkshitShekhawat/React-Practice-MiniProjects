@@ -1,0 +1,80 @@
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+} */
+
+body {
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.header{
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+.header nav a{
+  margin: 0 10px;
+  color: white;
+}
+
+/* About Section */
+.about-section{
+  padding: 50px;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+.about-section h2, .projects-section h2, .contact-section h2 {
+  margin-bottom: 20px;
+}
+
+/* PROJECT SECTION */
+.projects-section {
+  padding: 50px;
+  text-align: center;
+}
+
+.projects-list, .project-item {
+  margin-bottom: 30px;
+}
+
+.projects-list, .project-item {
+  margin-bottom: 30px ;
+}
+
+.projects-list .project-item a{
+  color: blue;
+}
+
+/* CONTACT SECTION */
+.contact-section{
+  padding: 50px;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+.contact-section a{
+  color: blue;
+}
+
+
+/* Footer */
+.footer{
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
