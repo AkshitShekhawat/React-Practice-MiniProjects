@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import api from './assets/PracticeCode/33_API\'sinReact/api/api';
+import axios from 'axios';
 
 // Intersepters are a thing with axios which allow you to run custom code or intersept the request before it is 
 // handled by then or catch 
@@ -15,6 +15,19 @@ import api from './assets/PracticeCode/33_API\'sinReact/api/api';
 //   return response;
   
 // });
+
+const api = axios.create({
+  baseURL: 'https://jsonplaceholder.typicode.com',
+  headers: {
+    'Authorization':'Bearer <TOKEN>',
+    'Content-Type':'application/json'
+  }
+});
+
+api.interceptors.request.use(request => {
+  console.log("Starting request ", request);
+  return request;
+});
 
 function App() {
   const [data, setData] = useState();

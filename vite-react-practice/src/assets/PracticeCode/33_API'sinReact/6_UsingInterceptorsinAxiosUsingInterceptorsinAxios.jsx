@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import api from './assets/PracticeCode/33_API\'sinReact/api/api';
+import axios from 'axios';
 
 // Intersepters are a thing with axios which allow you to run custom code or intersept the request before it is 
 // handled by then or catch 
 
-// axios.interceptors.request.use( request => {
-//   console.log('Starting Request', request)
-//   return request;
-// });
+axios.interceptors.request.use( request => {
+  console.log('Starting Request', request)
+  return request;
+});
 
-// axios.interceptors.request.use( response => {
-//   console.log('Response ', response);
-//   return response;
+axios.interceptors.request.use( response => {
+  console.log('Response ', response);
+  return response;
   
-// });
+});
 
 function App() {
   const [data, setData] = useState();
@@ -24,7 +24,7 @@ function App() {
     const newPost ={title: 'foo',
                     body: 'bar',
                     userId: 1}
-    api.post('posts', newPost)   // axios.post('posts', newPost)// we have axios.post and specify the url and newPost this is the object that we want to post
+    axios.post('https://jsonplaceholder.typicode.com/posts', newPost)  // we have axios.post and specify the url and newPost this is the object that we want to post
       .then(response => {                                    // and then we have the handeling over here, From this we can handle the response
         console.log('New Post Added: ', response.data);
         setData([response.data]);
